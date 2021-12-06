@@ -1,27 +1,25 @@
 import React, { Component,Suspense, lazy } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import Pokemon from './components/pokemon/pokemon.view';
+
+
 import Spinner from '../app/shared/Spinner';
 
 const Dashboard = lazy(() => import('./dashboard/Dashboard'));
-
 const Buttons = lazy(() => import('./basic-ui/Buttons'));
 const Dropdowns = lazy(() => import('./basic-ui/Dropdowns'));
 const Typography = lazy(() => import('./basic-ui/Typography'));
-
 const BasicElements = lazy(() => import('./form-elements/BasicElements'));
-
 const BasicTable = lazy(() => import('./tables/BasicTable'));
-
 const Mdi = lazy(() => import('./icons/Mdi'));
-
 const ChartJs = lazy(() => import('./charts/ChartJs'));
-
 const Error404 = lazy(() => import('./error-pages/Error404'));
 const Error500 = lazy(() => import('./error-pages/Error500'));
-
 const Login = lazy(() => import('./user-pages/Login'));
 const Register1 = lazy(() => import('./user-pages/Register'));
+
+// const Pokemon = lazy(() => import('./components/pokemon/pokemon.view'));
 
 
 class AppRoutes extends Component {
@@ -29,6 +27,8 @@ class AppRoutes extends Component {
     return (
       <Suspense fallback={<Spinner/>}>
         <Switch>
+          {/* <Route path="/pokemons/pokemon" component={ Pokemon } />
+
           <Route exact path="/dashboard" component={ Dashboard } />
 
           <Route path="/basic-ui/buttons" component={ Buttons } />
@@ -48,7 +48,7 @@ class AppRoutes extends Component {
           <Route path="/user-pages/register-1" component={ Register1 } />
 
           <Route path="/error-pages/error-404" component={ Error404 } />
-          <Route path="/error-pages/error-500" component={ Error500 } />
+          <Route path="/error-pages/error-500" component={ Error500 } /> */}
 
 
           <Redirect to="/dashboard" />

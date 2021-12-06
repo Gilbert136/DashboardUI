@@ -23,7 +23,7 @@ class App extends Component {
           { navbarComponent }
           <div className="main-panel">
             <div className="content-wrapper">
-              <AppRoutes/>
+              {/* <AppRoutes/> */}
             </div>
             { footerComponent }
           </div>
